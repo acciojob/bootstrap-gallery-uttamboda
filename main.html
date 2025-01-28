@@ -26,10 +26,13 @@
 </head>
 <body>
 
+  <!-- Header -->
   <div class="container my-4">
     <h2 class="text-center">Cards Gallery</h2>
 
+    <!-- Gallery Row (only one .row for all cards) -->
     <div class="row g-4">
+      <!-- Card 1 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image1.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image1.jpg">
@@ -40,6 +43,7 @@
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image2.jpg" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image2.jpg">
@@ -50,6 +54,7 @@
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image3.jpg" class="card-img-top" alt="Image 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image3.jpg">
@@ -59,7 +64,8 @@
           </div>
         </div>
       </div>
-      
+
+      <!-- Card 4 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image4.jpg" class="card-img-top" alt="Image 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image4.jpg">
@@ -70,6 +76,7 @@
         </div>
       </div>
 
+      <!-- Card 5 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image5.jpg" class="card-img-top" alt="Image 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image5.jpg">
@@ -80,6 +87,7 @@
         </div>
       </div>
 
+      <!-- Card 6 -->
       <div class="col-md-4">
         <div class="card">
           <img src="https://storage.googleapis.com/acciojob-open-file-collections/image6.jpg" class="card-img-top" alt="Image 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image6.jpg">
@@ -90,39 +98,11 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://storage.googleapis.com/acciojob-open-file-collections/image7.jpg" class="card-img-top" alt="Image 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image7.jpg">
-          <div class="card-body">
-            <h6 class="card-title">Card 7</h6>
-            <p class="card-text">Details about Image 7</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://storage.googleapis.com/acciojob-open-file-collections/image8.jpg" class="card-img-top" alt="Image 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image8.jpg">
-          <div class="card-body">
-            <h6 class="card-title">Card 8</h6>
-            <p class="card-text">Details about Image 8</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://storage.googleapis.com/acciojob-open-file-collections/image9.jpg" class="card-img-top" alt="Image 9" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://storage.googleapis.com/acciojob-open-file-collections/image9.jpg">
-          <div class="card-body">
-            <h6 class="card-title">Card 9</h6>
-            <p class="card-text">Details about Image 9</p>
-          </div>
-        </div>
-      </div>
     </div>
 
   </div>
 
+  <!-- Lightbox Modal -->
   <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -133,17 +113,19 @@
     </div>
   </div>
 
+  <!-- Bootstrap JS, Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
   <script>
+    // Lightbox functionality
     const modal = document.getElementById('lightboxModal');
     const lightboxImage = document.getElementById('lightboxImage');
 
     modal.addEventListener('show.bs.modal', (event) => {
-      const button = event.relatedTarget;  
-      const imageUrl = button.getAttribute('data-bs-img');  
-      lightboxImage.src = imageUrl;  
+      const button = event.relatedTarget;  // The clicked image element
+      const imageUrl = button.getAttribute('data-bs-img');  // Get the image URL from data-bs-img attribute
+      lightboxImage.src = imageUrl;  // Set the lightbox image source
     });
   </script>
 
